@@ -7,7 +7,8 @@ LetCpp is a React + TypeScript web app that displays C++ solutions for LeetCode 
 
 ## ✨ Features
 - Clean URLs for each problem: `/problems/{number}`
-- Problem title, difficulty, description, examples, and constraints
+
+- Problem title, difficulty, and local description
 - Multiple C++ solution approaches per problem
 - Syntax-highlighted C++ code (highlight.js)
 - Time and space complexity analysis
@@ -38,10 +39,13 @@ letcpp/
 ├── package.json           # Dependencies & scripts
 ```
 
-## ➕ Adding Problems
-1. Open `src/data/problems.ts`.
-2. Add a new object to the `problems` array, following the `Problem` interface.
-3. Each problem can have multiple solutions, each with its own code, approach, and complexity.
+
+## ➕ Adding Problems & Solutions
+1. Open `src/data/problems.ts` to add new problem metadata (title, difficulty, etc.).
+2. Add solution files in `src/solutions/` (e.g., `1.ts`, `2.ts`, etc.), each exporting an array of solution objects for that problem.
+3. Each solution includes C++ code, approach, and complexity analysis.
+4. All problem data and solutions are managed locally—no external API calls.
+
 
 ## 🏁 Running the App
 ```bash
@@ -51,8 +55,9 @@ npm start
 ```
 Visit [http://localhost:3000](http://localhost:3000) in your browser.
 
+
 ## 📦 Deployment
-You can deploy to Vercel, Netlify, or any static hosting that supports React.
+You can deploy to Vercel, Netlify, or any static hosting that supports React. All data is local—no LeetCode API or external dependencies required for problem content.
 
 ## 📄 License
 MIT
