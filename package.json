@@ -19,7 +19,8 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "react-scripts build && cp build/index.html build/200.html",
+    "build:render": "react-scripts build && cp build/index.html build/200.html && cp public/static.json build/ && cp public/_redirects build/",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },

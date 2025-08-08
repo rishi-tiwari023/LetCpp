@@ -28,4 +28,14 @@ Thumbs.db
 coverage/
 
 # TypeScript
-*.tsbuildinfo 
+*.tsbuildinfo
+
+# Keep deployment config files
+!public/_redirects
+!public/_headers
+!public/static.json
+!public/rewrite.json
+!render.yaml
+!netlify.toml
+!vercel.json
+!build.sh
